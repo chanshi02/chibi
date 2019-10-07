@@ -1,4 +1,7 @@
-class Counter(object):
-    def __init__(self):
-        self.a = 0
-        self.b = 1
+class Q(object):
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+q = Q(1,2)
+print(q)
