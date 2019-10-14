@@ -1,4 +1,7 @@
 
+class Expr(object):
+    pass
+
 class Val(object):
     __slots__ = ['value']
     def __init__(self, value = 0):
@@ -12,8 +15,11 @@ v = Val(1)
 print(v)
 assert v.eval() == 1
 
+assert isinstance(v, Expr)#True
+assert isinstance(v, Val)#True
+assert isinstance(v,int)#False
 
-class Add(object):
+class Add(Expr):
     __slots__ = ['left', 'right']
     def __init__(self,a,b):
         self.left = a
