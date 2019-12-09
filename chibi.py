@@ -53,32 +53,32 @@ class Mod(Binary):
     def eval(self, env: dict):
         return self.left.eval(env) % self.right.eval(env)
 
-class Eq(Bainary):
+class Eq(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) == self.right.eval(env) else 0
 
-class Ne(Bainary):
+class Ne(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) != self.right.eval(env) else 0
 
-class Lt(Bainary):
+class Lt(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) < self.right.eval(env) else 0
 
-class Lte(Bainary):
+class Lte(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) <= self.right.eval(env) else 0
 
-class Gt(Bainary):
+class Gt(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) > self.right.eval(env) else 0
 
-class Gte(Bainary):
+class Gte(Binary):
     __slots__ = ['left', 'right']
     def eval(self, env: dict):
         return 1 if self.left.eval(env) >= self.right.eval(env) else 0
